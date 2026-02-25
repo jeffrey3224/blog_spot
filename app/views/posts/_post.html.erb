@@ -2,11 +2,13 @@
   <div>
     <strong></strong>
     <%= post.title %>
+    
   </div>
 
   <div>
     <strong></strong>
-    <%= post.user_id %>
+    <%= post.user.user_name %>
+    <%= time_tag post.updated_at %>
   </div>
-  
+
 </div>

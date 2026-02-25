@@ -5,6 +5,11 @@
   <%= f.hidden_field :reset_password_token %>
 
   <div class="field">
+    <p><%= f.label :user_name %></p>
+    <p><%= f.text_field :user_name, autofocus: true %></p>
+  </div>
+
+  <div class="field">
     <p><%= f.label :password, "New password" %></p>
     <% if @minimum_password_length %>
       <p><em>(<%= @minimum_password_length %> characters minimum)</em></p>
