@@ -1,3 +1,31 @@
+*{
+background-color: rgb(27, 27, 27);
+color: white;
+}
+
+.nav-content {
+    display: flex;
+    flex-direction: row;
+    gap: 7vw;
+}
+
+.nav-content a {
+    text-decoration: none;
+}
+
+.nav-content a:hover {
+    color: rgb(0, 177, 177);
+}
+
+.nav-user a { 
+    text-decoration: none;
+}
+
+.nav-user a:hover {
+    color: rgb(0, 177, 177);
+}
+
+
 .delete-button {
     background-color: red;
     color: white;
@@ -5,4 +33,52 @@
 
 button.delete-button:hover {
     background-color: rgb(131, 1, 1) !important;
+}
+
+.main-navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px, 10px;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Button */
+.dropbtn {
+  background-color: #3498db;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Menu (hidden by default) */
+.dropdown-content {
+  display: none; /* hidden initially */
+  position: absolute;
+  background-color: white;
+  min-width: 140px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  z-index: 100;
+}
+
+/* Menu links */
+.dropdown-content a {
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: black;
+}
+
+/* Hover highlight */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
 }
