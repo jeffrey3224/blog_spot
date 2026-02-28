@@ -5,21 +5,21 @@ import "controllers"
 import "trix"
 import "@rails/actiontext"
 
-document.addEventListener("DOMContentLoaded", function() {
-    const button = document.getElementById("dropdown-button")
-    const menu = document.getElementById("dropdown-menu");
+document.addEventListener("turbo:load", function() {
+  // Toggle the dropdown menu
+  const button = document.getElementById("dropdown-button");
+  const menu = button.parentElement.querySelector(".dropdown-content");
 
-    button.addEventListener("click", function() {
-        if (menu.style.display === "block") {
-            menu.style.display = "none"
-        } else {
-            menu.style.display = "block"
-        }
-    })
+  button.addEventListener("click", function(event) {
+    event.stopPropagation();
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+  });
 
-    window.addEventListener("click", function(event) {
-        if (!button.contains(event.target) && !menu.contains(event.target)) {
-            menu.style.display = "none"
-        }
-    })
-})
+  // Close dropdown when clicking outside
+  window.addEventListener("click", function(event) {
+    if (!button.contains(event.target) && !menu.contains(event.target)) {
+      menu.style.display = "none";
+    }
+  });
+});
+
