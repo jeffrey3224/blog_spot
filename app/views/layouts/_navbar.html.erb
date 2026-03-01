@@ -1,5 +1,8 @@
-<nav class="main-navbar">
-    <image src="/main-logo-full.svg" width="180px" />
-    
-    <%= render "/layouts/dropdown" %>
+<nav class="flex justify-center w-full px-10 py-3">
+    <div class="flex flex-row justify-between items-center w-full max-w-[1200px]">
+        <image src="/main-logo-full.svg" width="150px" />
+        
+        <button class="dropbtn" id="dropdown-button"><%= image_tag "text-align-justify.svg", class: "w-7 text-white" %>
+    </button>
+    </div>
 </nav>

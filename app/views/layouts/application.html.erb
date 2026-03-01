@@ -6,6 +6,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Blog Spot">
     <meta name="mobile-web-app-capable" content="yes">
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/holiday.css@0.11.5" /> -->
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -30,8 +31,11 @@
 
     <%= render partial: 'layouts/navbar' %>
     
-    <main>
+    <main class="flex flex-row justify-between bg-white">
+      <div>
       <%= yield %>
+      </div>
+      <%= render partial: 'layouts/sidebar'%>
     </main>
 
   </body>
