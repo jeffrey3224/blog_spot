@@ -1,8 +1,29 @@
-<nav class="flex justify-center w-full px-10 py-3">
+<nav class="bg-stone-900 flex justify-center w-full px-12 py-3 ">
     <div class="flex flex-row justify-between items-center w-full max-w-[1200px]">
-        <image src="/main-logo-full.svg" width="150px" />
-        
-        <button class="dropbtn" id="dropdown-button"><%= image_tag "text-align-justify.svg", class: "w-7 text-white" %>
-    </button>
+        <%= link_to root_path do %>
+            <image src="/main-logo-full.svg" width="150px" />
+        <% end %>
+
+        <div class="flex flex-row gap-5">
+                <% if current_user %>
+                <button class="navbar-button">
+                    <%= link_to "Posts", posts_path %>
+                </button>
+            
+                <button class="navbar-button">
+                    <%= link_to "Account", edit_user_registration_path %>
+                </button>
+                <button class="navbar-button bg-gray-600">
+                    <%= link_to "Sign Out", destroy_user_session_path, data: { turbo_method: :delete } %>
+                </button>
+            <% else %>
+                <button class="navbar-button">
+                    <%= link_to "Log In", new_user_session_path %>
+                </button>
+                <button class="navbar-button bg-gray-200">
+                    <%= link_to "Sign Up", new_user_registration_path %>
+                </button>
+            <% end %>
+        </div>
     </div>
 </nav>

@@ -1,10 +1,7 @@
 <aside class="">
     <div class="dropdown">
         <div class="h-[calc(100vh-90px)] w-40 border-l border-[1px]-l border-white" id="">
-            <%=link_to "Home", root_path %>
-
-            <%= link_to "About", about_path%>
-
+            
             <%= link_to "Posts", posts_path%>
             <% if current_user %>
                 <%= link_to "Account", edit_user_registration_path %>

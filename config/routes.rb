@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   }
 
   get "pages/home"
-  get "about", to: "about#index"
+  get "welcome", to: "welcome#welcome"
   resources :posts do
     resources :likes
     resources :comments

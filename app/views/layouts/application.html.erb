@@ -31,11 +31,10 @@
 
     <%= render partial: 'layouts/navbar' %>
     
-    <main class="flex flex-row justify-between bg-white">
-      <div>
-      <%= yield %>
+    <main class="flex justify-center px-12 py-10">
+      <div class="w-full max-w-[1200px]">
+        <%= yield %>
       </div>
-      <%= render partial: 'layouts/sidebar'%>
     </main>
 
   </body>
